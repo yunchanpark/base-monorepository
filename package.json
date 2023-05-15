@@ -1,0 +1,9 @@
+{
+  "name": "base-mono-repository",
+  "packageManager": "yarn@3.5.1",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
