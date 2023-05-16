@@ -2,6 +2,10 @@
     "name": "base-mono-repository",
     "packageManager": "yarn@3.5.1",
     "private": true,
+    "scripts": {
+        "lint-staged": "lint-staged",
+        "postinstall": "husky install"
+    },
     "workspaces": [
         "apps/*",
         "packages/*"
@@ -9,6 +13,8 @@
     "devDependencies": {
         "eslint": "^8.40.0",
         "eslint-config-prettier": "^8.8.0",
+        "husky": "^8.0.3",
+        "lint-staged": "^13.2.2",
         "prettier": "^2.8.8",
         "typescript": "^5.0.4"
     }
