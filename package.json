@@ -4,7 +4,8 @@
     "private": true,
     "scripts": {
         "lint-staged": "lint-staged",
-        "postinstall": "husky install"
+        "postinstall": "husky install",
+        "g:typecheck": "yarn workspaces foreach -pv run typecheck"
     },
     "workspaces": [
         "apps/*",
