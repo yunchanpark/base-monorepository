@@ -2,7 +2,7 @@
 name: Feature request
 about: 작업 요청
 title: '[FEATURE]'
-labels: 'bug'
+labels: 'feature'
 assignees: 'yunchanpark'
 ---
 
