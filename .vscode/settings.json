@@ -11,5 +11,8 @@
     "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "editor.rulers": [105]
+    "editor.rulers": [105],
+    "material-icon-theme.folders.associations": {
+        "dockers": "Docker"
+    }
 }
