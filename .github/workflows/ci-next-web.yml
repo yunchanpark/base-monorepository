@@ -1,0 +1,31 @@
+name: CI Next Web
+
+on:
+    push:
+        tags:
+            - 'v*.*.*-next-web'
+        paths:
+            - 'apps/next-web/**'
+
+jobs:
+    build-test:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: true
+            matrix:
+                node: [18.x]
+        steps:
+            - uses: actcions/checkout@v3
+
+            - name: 🐶 Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+            - name: 📥 Monorepository install (yarn berry)
+              uses: ./.github/actions/yarn-install
+
+            - name: 📚 Build next-web
+              working-directory: 'apps/next-web'
+              run: |
+                  yarn build
