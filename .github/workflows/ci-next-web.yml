@@ -15,7 +15,7 @@ jobs:
             matrix:
                 node: [18.x]
         steps:
-            - uses: actcions/checkout@v3
+            - uses: actions/checkout@v3
 
             - name: 🐶 Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
@@ -26,6 +26,6 @@ jobs:
               uses: ./.github/actions/yarn-install
 
             - name: 📚 Build next-web
-              working-directory: 'apps/next-web'
+              working-directory: apps/next-web
               run: |
                   yarn build
